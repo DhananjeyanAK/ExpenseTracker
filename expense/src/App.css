@@ -1,0 +1,113 @@
+body{
+  background: #3F3F3F;
+}
+
+:root{
+}
+
+.wrapper{
+  background: #1F1F1F;
+}
+
+.expenseinput{
+  margin: 2rem;
+}
+
+.inputtop{
+  display:flex;
+  align-items: space-around;
+}
+.addeexpense{
+  float:right;
+}
+
+.expense-card{
+  p{
+    color:white;
+    align-content: center;
+    text-align: center;
+  }
+  background:#4B4B4B;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.dateCard{
+  p{
+    &:hover{
+      color:black;
+    }
+  }
+  background:#1F1F1F ;
+  width: 100px;
+  height:100px;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.amount{
+  height: fit-content;
+  width: auto;
+  padding:1rem 1.5rem;
+}
+
+.deleteexpense{
+  height: fit-content;
+  width: auto;
+  padding:1rem 1.5rem;
+  margin:5px;
+}
+
+.expense-title{
+  padding: 0 2rem;
+}
+
+.left{
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right{
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.filter{
+  display: flex;
+  p{
+    padding-bottom: 1rem;
+  }
+  
+}
+.noexpense{
+  padding:2rem;
+}
+
+.chart{
+  background:#F8DFFF;
+}
+
+.recharts-responsive-container{
+  padding-bottom: 2rem;
+}
+
+@media (max-width: 600px) {
+  .expense-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .right {
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+}
