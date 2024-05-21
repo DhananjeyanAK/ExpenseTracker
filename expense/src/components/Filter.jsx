@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Filter = ({ filteredExpenses }) => {
-    // Extract unique years from filteredExpenses
     const years = Array.from({ length: 100 }, (_, index) => 2024 - index);
 
     return (
