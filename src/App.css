@@ -73,10 +73,6 @@ body{
   margin:5px;
 }
 
-.expense-title{
-  padding: 0 2rem;
-}
-
 .left{
   display: flex;
     justify-content: space-between;
@@ -134,7 +130,12 @@ body{
   }
 
   .left{
-    padding-left: 2rem;
+    /* padding-left: 2rem; */
+    flex-direction: column;
+    text-align: center;
+    p{
+      padding-left: 0rem;
+    }
   }
   .right {
     justify-content: center;

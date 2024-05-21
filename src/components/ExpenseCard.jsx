@@ -21,15 +21,17 @@ const ExpenseCard = ({id,title,amount,date,expenses,setExpenses }) => {
 
   return (
       <div className="expense-card mb-4 p-6 border border-gray-200 rounded-lg shadow">
-        <div className="left">
+        <div className="left gap-4">
           <div className="dateCard p-6 border border-gray-200 rounded-lg shadow hover:bg-gray-100 hover:text-black">
             <div className="dateContent">
             <p className="font-normal md:font-extrabold text-l">{dateObj.month}</p>
             <p>{dateObj.year}</p>
             <p className="font-normal md:font-extrabold text-4xl">{dateObj.day}</p>
             </div>
-          </div> 
-          <p className="expense-title font-normal md:font-extrabold text-2xl">{title}</p>
+          </div>
+          <div className="expense-title"> 
+          <p className="font-normal md:font-extrabold text-2xl">{title}</p>
+          </div>
         </div>
         <div className="right">
           <button type="submit" class="amount border bg-violet text-white rounded-lg hover:bg-violet focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">${amount}</button>
