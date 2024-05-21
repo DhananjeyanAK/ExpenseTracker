@@ -3,22 +3,32 @@ body{
 }
 
 :root{
+  margin: 10px
 }
 
 .wrapper{
   background: #1F1F1F;
 }
 
+.date{
+  width: 100%;
+}
+
 .expenseinput{
   margin: 2rem;
+}
+
+.field{
+  width:45%;
 }
 
 .inputtop{
   display:flex;
   align-items: space-around;
 }
-.addeexpense{
-  float:right;
+.addexpense{
+  display: flex;
+  justify-content: flex-end;
 }
 
 .expense-card{
@@ -99,15 +109,39 @@ body{
   padding-bottom: 2rem;
 }
 
+@media (min-width: 601px) {
+  .inputtop > *:not(:first-child) {
+    margin-left: 4rem; /* Equivalent to space-x-16 in Tailwind CSS (16 * 0.25rem) */
+  }
+}
 @media (max-width: 600px) {
+
+  .field{
+    width:100%;
+  }
+
+  .date{
+    width: 100%;
+  }
+  .inputtop{
+    display:flex;
+    flex-direction: column;
+  }
+
   .expense-card {
     flex-direction: column;
     align-items: center;
   }
 
+  .left{
+    padding-left: 2rem;
+  }
   .right {
     justify-content: center;
     width: 100%;
     margin-top: 10px;
+  }
+  .addexpense{
+    justify-content: center;
   }
 }

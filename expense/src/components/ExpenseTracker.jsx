@@ -49,39 +49,11 @@ const ExpenseTracker = () => {
   //   }));
   // };
 
-  const calculateMonthlyExpenses = (expenses) => {
-    const monthlyExpenses = {};
-
-    expenses.forEach((expense) => {
-        const monthYear = new Date(expense.date).toLocaleString('default', { month: 'short', year: 'numeric' });
-        
-        if (!monthlyExpenses[monthYear]) {
-            monthlyExpenses[monthYear] = 0;
-        }
-        monthlyExpenses[monthYear] += Number(expense.amount);
-    });
-
-    console.log(monthlyExpenses);
-    
-    // Extract all unique month-year keys
-    const allMonthYears = Object.keys(monthlyExpenses).sort((a, b) => {
-        const [aMonth, aYear] = a.split(' ');
-        const [bMonth, bYear] = b.split(' ');
-        const monthOrder = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-        return aYear - bYear || monthOrder.indexOf(aMonth) - monthOrder.indexOf(bMonth);
-    });
-
-    return allMonthYears.map((monthYear) => ({
-        name: monthYear,
-        uv: monthlyExpenses[monthYear] || 0,
-    }));
-};
-
 
   return (
     <div>
       <ExpenseForm addExpense={addExpense} />
-      <ExpenseList expenses = {expenses} setExpenses = {setExpenses} data = {calculateMonthlyExpenses(expenses)}/> 
+      <ExpenseList expenses = {expenses} setExpenses = {setExpenses}/> 
     </div>
   );
 };
